@@ -31,7 +31,7 @@ function LandingPage() {
         justifyContent: 'start',
         width: '100%',
         margin:"20px",
-        gap: 2, // Adjust the gap between cards as needed
+        gap: 2, 
       }}>  
       <Typography sx={{color:"#ffff00",fontWeight:"bolder",paddingTop:"8px"}}>FilterProduct:-</Typography>
       <Button variant="contained" onClick={()=>{handleClickFilter("Allproduct")}}>AllProduct</Button> 

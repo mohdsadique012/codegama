@@ -36,7 +36,7 @@ function ProductPage() {
     </Grid>
     <Grid item xs={12} sm={7}>
       <Box sx={{ display: 'flex', flexDirection: 'column',padding:1 }}>
-        {/* Four boxes in a flex row */}
+     
         <Box sx={{ flex: 1, padding: 1 ,marginTop:3 }}>
         <Typography sx={{fontWeight:"bolder",fontSize:"20px",color:"purple"}}> {Element.category}</Typography>
         </Box>

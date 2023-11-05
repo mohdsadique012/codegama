@@ -7,13 +7,13 @@ function Jumbotron() {
         width: '100%',
         height: "300px",
         backgroundImage: 'url("https://aphconnectcenter.org/wp-content/uploads/sites/5/MicrosoftTeams-image-15-1.jpg")', // Replace with your image URL
-        /* Additional background properties */
-        backgroundSize: 'cover', // Fit the image inside the Container
+        
+        backgroundSize: 'cover', 
       backgroundPosition: 'center',
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-            // Adjust according to your preference
+            
       }}>
       <Box align="center" maxHeight="100px">  <Typography align="center" variant="h4" sx={{ fontWeight: 'bolder', color: 'red', fontSize: '2.5rem' }}>
       Let's Start Shopping

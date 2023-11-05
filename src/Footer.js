@@ -23,16 +23,16 @@ function Footer() {
             size="small"
             sx={{
               '& .MuiInputBase-input': {
-                color: 'white', // Set the text color to white
+                color: 'white', 
               },
               '& fieldset': {
-                borderColor: 'white !important', // Set the border color to white
+                borderColor: 'white !important', 
               },
               '&:hover fieldset': {
-                borderColor: 'white !important', // Change border color on hover (optional)
+                borderColor: 'white !important', 
               },
               '&.Mui-focused fieldset': {
-                borderColor: 'white !important', // Change border color when focused (optional)
+                borderColor: 'white !important', 
               },
             }}
           />
@@ -40,8 +40,8 @@ function Footer() {
           variant="outlined"
           
           sx={{
-            color: 'white', // Set the text color to white
-            borderColor: 'white', // Set the border color to white
+            color: 'white', 
+            borderColor: 'white', 
             marginLeft:"5px"
           }}
         >
@@ -60,7 +60,6 @@ function Footer() {
           <Grid item xs={12} md={4}>
             <Typography variant="h6">SECURE ORDERING & TRANSACTIONS</Typography>
             <div className="creditCardIcon">
-              {/* Adjust the paths for the images to the correct locations */}
               <img className="creditcard" src="https://www.mastercard.co.in/content/dam/public/mastercardcom/sg/en/consumers/find-a-card/images/debit-platinum-mastercard-card_1280x720.png" alt="" />
               <img className="creditcard" src="https://d28wu8o6itv89t.cloudfront.net/images/Visadebitcardpng-1599584312349.png" alt="" />
               <img className="creditcard" src="https://pngimg.com/d/mastercard_PNG23.png" alt="" />
