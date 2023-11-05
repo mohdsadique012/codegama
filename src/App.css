@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+.search-input{
+  width: 20rem;
+  height: 2rem;
+  color: black;
+  font-weight: bolder ;
+  font-size: larger;
+  background-color: cornsilk;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #000;
 }
+.filtered-titles-list {
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  max-height: 200px; /* Set the desired max height */
+  overflow: auto;
+  width: auto;
+  position: absolute;
+  border: 1px solid #ccc; /* Add a border for better visualization */
+  padding: 10px; /* Add some padding */
+  background-color: rgb(23, 22, 22);
+  z-index: 2000;
+
 }
+.image-search{
+  width: 8rem;
+  height: 3.5rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.title-search{
+  font-weight: bolder;
+margin-left: 1rem;
+color: black;
+
+
+}
+.container-search{
+  background-color: rgb(8, 164, 175);
+  margin-bottom: 1rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+ 
+  border: 2px solid #000
+}
+.filtered-titles-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.filtered-titles-list::-webkit-scrollbar-thumb {
+  background-color: #dac017ae; /* Color of the thumb */
+  border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.filtered-titles-list::-webkit-scrollbar-thumb:hover {
+  background-color: #dac017ae; /* Color of the thumb on hover */
+}
+
+.filtered-titles-list::-webkit-scrollbar-track {
+  background-color: black; /* Color of the track */
+  border-radius: 3px;
+}
+
+.filtered-titles-list::-webkit-scrollbar-track:hover {
+  background-color: black; /* Color of the track on hover */
+}
+@media screen and (max-width: 380px) {
+  .search-input {
+    width: 10rem;
+    font-size: medium;
   }
-  to {
-    transform: rotate(360deg);
+  .filtered-titles-list{
+    width: 10rem;
+  }
+  .modal{
+    width:100px;
+    height:auto
+  }
+  .image-search {
+    width: 6rem;
+    height: 3rem;
+  }
+
+  .title-search {
+    margin-left: 0.5rem;
   }
 }
+@media screen and (max-width: 500px) {
+  .search-input {
+    width: 13rem;
+    font-size: medium;
+  }
+  .filtered-titles-list{
+    width: 13rem;
+  }
+.modal{
+  width: 100px;;
+  height:auto
+}
+  .image-search {
+    width: 6rem;
+    height: 3rem;
+  }
+
+  .title-search {
+    margin-left: 0.5rem;
+  }
+}
+
+
+
+

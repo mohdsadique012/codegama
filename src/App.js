@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Footer from "./Footer"
+import Navbar from "./Layout/Navbar"
+import Jumbotron from './Layout/Jumbotron';
+import LandingPage from './Component/LandingPage/LandingPage';
+import AddCart from "./Component/AddCart.js/AddCart"
+import ProductPage from './Component/Productpage/ProductPage';
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>  
+   <Navbar />
+   <AddCart />
+   <Routes>
+   
+   <Route exact path="/" element={<LandingPage />}></Route>
+   <Route path="/Product/:id" element={<ProductPage />}></Route>
+
+      
+   </Routes>
+    <Footer />
+   </>
   );
 }
 
