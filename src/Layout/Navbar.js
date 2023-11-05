@@ -94,7 +94,7 @@ export default function SearchAppBar() {
             sx={{ mr: 2 }}
           >
             <ShoppingCart />
-            <Typography>{Data.addcart.length}</Typography>
+            <Typography color="red" sx={{marginBottom:3}}>{Data.addcart.length}</Typography>
           </IconButton>
 
           <Box>
