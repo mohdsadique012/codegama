@@ -25,12 +25,12 @@ function ProductPage() {
     <>
       {Data.detailproduct.map((Element) => {
         return (
-          <Container sx={{ backgroundColor: "black" }}>
+          <Container sx={{ backgroundColor: "white",marginTop:"22px" }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={5}>
                 <Box sx={{ height: 300, width: "100%", marginTop: 3 }}>
                   <img
-                    src={Element.image}
+                    src={Element.thumbnail}
                     alt="Your Image"
                     style={{
                       width: "100%",
@@ -49,11 +49,11 @@ function ProductPage() {
                       sx={{
                         fontWeight: "bolder",
                         fontSize: "20px",
-                        color: "purple",
+                        color: "grey",
                       }}
                     >
                       {" "}
-                      {Element.category}
+                      {Element.brand}
                     </Typography>
                   </Box>
                   <Box sx={{ flex: 1, padding: 1 }}>
@@ -61,7 +61,7 @@ function ProductPage() {
                       sx={{
                         fontWeight: "bolder",
                         fontSize: "30px",
-                        color: "red",
+                        color: "grey",
                       }}
                     >
                       {" "}
@@ -74,7 +74,7 @@ function ProductPage() {
                     </Typography>
                   </Box>
                   <Box sx={{ flex: 1, padding: 1 }}>
-                    <Typography sx={{ fontWeight: "bolder", color: "purple" }}>
+                    <Typography sx={{ fontWeight: "bolder", color:  "#e91e63" }}>
                       {Element.description}
                     </Typography>
                   </Box>
@@ -86,7 +86,7 @@ function ProductPage() {
                         fontSize: "15px",
                       }}
                     >
-                      Hurry up {Element.rating.count} left
+                      Hurry up {Element.stock} left
                     </Typography>
                   </Box>
                   <Box
@@ -113,11 +113,7 @@ function ProductPage() {
                 </Box>
               </Grid>
             </Grid>
-            <Typography
-              sx={{ fontWeight: "bolder", fontSize: "30px", color: "red" }}
-            >
-              Related Product
-            </Typography>
+            <Box sx={{height:"50px",backgroundColor: "#e91e63",display:"flex",alignItem:"center",justifyContent:"center" , marginTop:"10px"}} ><Typography sx={{color:"white",fontWeight: "bolder",fontSize:"30px"}}>Related Product</Typography></Box>
             <Box
               sx={{
                 display: "flex",
@@ -134,7 +130,7 @@ function ProductPage() {
                     slug={item.id}
                     custContent={item.category}
                     showContent={truncateText(item.description, 100)}
-                    imagee={item.image}
+                    imagee={item.thumbnail}
                   />
                 );
               })}

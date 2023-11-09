@@ -9,7 +9,7 @@ import {
   import axios from "axios";
   
   /* API URL */
-  const ALLMOVIEURL = "https://fakestoreapi.com/products";
+  const ALLMOVIEURL = "https://dummyjson.com/products?limit=200";
   // const authToken = "Bearer Wookie2019";
   const AppContext = createContext();
   
@@ -39,8 +39,9 @@ import {
         const res = await axios.get(url);
         const Product = await res.data;
         const product= Product
+        console.log(Product,"lllll")
       
-        dispatch({ type: "SET_API_DATA", payload:product });
+        dispatch({ type: "SET_API_DATA", payload:product.products });
       
       } catch (error) {
         dispatch({ type: "API_ERROR" });

@@ -65,12 +65,12 @@ export default function SearchAppBar() {
           <IconButton
             size="large"
             edge="end"
-            color="white"
+            color="#e91e63"
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
             <Link to="./">
-              <HomeIcon />
+              <HomeIcon sx={{color:"#e91e63"}} />
             </Link>
           </IconButton>
           <Typography
@@ -94,7 +94,7 @@ export default function SearchAppBar() {
             sx={{ mr: 2 }}
           >
             <ShoppingCart />
-            <Typography color="red" sx={{marginBottom:3}}>{Data.addcart.length}</Typography>
+            <Typography color="#e91e63" sx={{marginBottom:3}}>{Data.addcart.length}</Typography>
           </IconButton>
 
           <Box>

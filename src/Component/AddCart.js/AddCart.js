@@ -90,7 +90,7 @@ export default function CustomStyledModal() {
                       hanldeClickDeleteCart(index);
                     }}
                   />
-                  <img className="image-search" src={product.image} />
+                  <img className="image-search" src={product.thumbnail} />
                   <span className="title-search">{product.category} </span>
                 </div>
               </Box>

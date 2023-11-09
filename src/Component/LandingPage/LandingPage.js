@@ -18,46 +18,14 @@ function LandingPage() {
   };
 
   return (
-    <Container sx={{ bgcolor: "black", pb: 5 }}>
+    <Container sx={{  pb: 5 }}>
       <Jumbotron />
-      <Box
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "start",
-          width: "100%",
-          margin: "20px",
-          gap: 2,
-        }}
-      >
-        <Typography
-          sx={{ color: "#ffff00", fontWeight: "bolder", paddingTop: "8px" }}
-        >
-          FilterProduct:-
-        </Typography>
-        <Button
-          variant="contained"
-          onClick={() => {
-            handleClickFilter("Allproduct");
-          }}
-        >
-          AllProduct
-        </Button>
-        {Object.entries(Data.productCategory)?.map(
-          ([category, movieTitles]) => (
-            <Button
-              variant="contained"
-              key={category}
-              onClick={() => {
-                handleClickFilter(category);
-              }}
-            >
-              {category}
-            </Button>
-          )
-        )}
-      </Box>
-      <Box
+     
+      {Object.entries(Data.productCategory)?.map(
+        ([category, movieTitles]) => (
+        <Box>
+         <Box sx={{height:"50px",backgroundColor: "#e91e63",display:"flex",alignItem:"center",justifyContent:"center" , marginTop:"10px"}} ><Typography sx={{color:"white",fontWeight: "bolder",fontSize:"30px"}}>{category}</Typography></Box>
+         <Box
         sx={{
           display: "flex",
           flexWrap: "wrap",
@@ -66,15 +34,19 @@ function LandingPage() {
           gap: 2, // Adjust the gap between cards as needed
         }}
       >
-        {Data?.products.map((item, index) => (
+        {movieTitles?.slice(0, 3).map((item, index) => (
           <CardComponent
             slug={item.id}
-            custContent={item.category}
+            custContent={item.title}
             showContent={truncateText(item.description, 100)}
-            imagee={item.image}
+            imagee={item.thumbnail}
           />
         ))}
       </Box>
+         </Box>
+        )
+      )}
+      
     </Container>
   );
 }

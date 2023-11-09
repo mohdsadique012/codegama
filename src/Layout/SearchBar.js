@@ -23,6 +23,7 @@ const {searchTerms}=useProfileGlobal()
       <input
         type="text"
         startIcon={<SearchIcon />}
+        color="#e91e63"
         placeholder="Search product category"
         value={searchTerm}
         className="search-input"
